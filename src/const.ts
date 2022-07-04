@@ -1,0 +1,1 @@
+export const extensionName = 'vsc-open-all-files-in-directory';
