@@ -6,7 +6,7 @@
 	"publisher": "EuroCent",
 	"license": "MIT",
 	"repository": {
-		"url": ""
+		"url": "https://github.com/EuroCent82/vsc-open-all-files-in-directory"
 	},
 	"engines": {
 		"vscode": "^1.68.0"
