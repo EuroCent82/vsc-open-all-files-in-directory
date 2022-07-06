@@ -1,9 +1,9 @@
 {
-	"name": "vsc-open-all-files-in-directory",
+	"name": "vsc-oafid",
 	"displayName": "Open all Files in Directory or Subfolders",
 	"description": "Open All Files in Directory or Subfolders",
 	"version": "0.0.2",
-	"publisher": "EuroCent",
+	"publisher": "EuroCent82",
 	"license": "MIT",
 	"repository": {
 		"url": "https://github.com/EuroCent82/vsc-open-all-files-in-directory"
@@ -15,48 +15,48 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vsc-open-all-files-in-directory.currentOpenAllDirFiles",
-		"onCommand:vsc-open-all-files-in-directory.currentOpenAllDirFilesDepth"
+		"onCommand:vsc-oafid.currentOpenAllDirFiles",
+		"onCommand:vsc-oafid.currentOpenAllDirFilesDepth"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vsc-open-all-files-in-directory.currentOpenAllDirFiles",
+				"command": "vsc-oafid.currentOpenAllDirFiles",
 				"title": "Öffne alle Dateien"
 			},
 			{
-				"command": "vsc-open-all-files-in-directory.currentOpenAllDirFilesDepth",
+				"command": "vsc-oafid.currentOpenAllDirFilesDepth",
 				"title": "Öffne alle Dateien mit Unterordner"
 			}
 		],
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "vsc-open-all-files-in-directory.currentOpenAllDirFiles"
+					"command": "vsc-oafid.currentOpenAllDirFiles"
 				},
 				{
-					"command": "vsc-open-all-files-in-directory.currentOpenAllDirFilesDepth"
+					"command": "vsc-oafid.currentOpenAllDirFilesDepth"
 				}
 			],
 			"editor/title/context": [
 				{
-					"command": "vsc-open-all-files-in-directory.currentOpenAllDirFiles"
+					"command": "vsc-oafid.currentOpenAllDirFiles"
 				},
 				{
-					"command": "vsc-open-all-files-in-directory.currentOpenAllDirFilesDepth"
+					"command": "vsc-oafid.currentOpenAllDirFilesDepth"
 				}
 			]
 		},
 		"configuration": {
 			"title": "Open Files In Directory Configuration",
 			"properties": {
-				"vsc-open-all-files-in-directory.maximumFiles": {
+				"vsc-oafid.maximumFiles": {
 					"type": "number",
 					"default": 20,
 					"description": "Maximale Anzahl von Dateien, die in einer Aktion geöffnet werden können."
 				},
-				"vsc-open-all-files-in-directory.maximumFolderDepth": {
+				"vsc-oafid.maximumFolderDepth": {
 					"type": "number",
 					"default": 5,
 					"description": "Maximale Anzahl von tiefen Unterordnern."
