@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Visual Studio Code - Open All Files in Directory 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/vscode-%5E1.68.0-blue.svg" />
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
@@ -12,18 +12,6 @@
 ## Prerequisites
 
 - vscode ^1.68.0
-
-## Install
-
-```sh
-npm install
-```
-
-## Run tests
-
-```sh
-npm run test
-```
 
 ## Author
 

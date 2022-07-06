@@ -1,6 +1,6 @@
 {
 	"name": "vsc-open-all-files-in-directory",
-	"displayName": "vsc-open-all-files-in-directory",
+	"displayName": "Open all Files in Directory or Subfolders",
 	"description": "Open All Files in Directory or Subfolders",
 	"version": "0.0.1",
 	"publisher": "EuroCent",
@@ -23,11 +23,11 @@
 		"commands": [
 			{
 				"command": "vsc-open-all-files-in-directory.currentOpenAllDirFiles",
-				"title": "Open All Files"
+				"title": "Öffne alle Dateien"
 			},
 			{
 				"command": "vsc-open-all-files-in-directory.currentOpenAllDirFilesDepth",
-				"title": "Open All Files with Subfolders"
+				"title": "Öffne alle Dateien mit Unterordner"
 			}
 		],
 		"menus": {
@@ -53,13 +53,13 @@
 			"properties": {
 				"vsc-open-all-files-in-directory.maximumFiles": {
 					"type": "number",
-					"default": 3,
-					"description": "Maximum number of files to open in one action."
+					"default": 20,
+					"description": "Maximale Anzahl von Dateien, die in einer Aktion geöffnet werden können."
 				},
 				"vsc-open-all-files-in-directory.maximumFolderDepth": {
 					"type": "number",
-					"default": 1,
-					"description": "Maximum number of depth subfolders."
+					"default": 5,
+					"description": "Maximale Anzahl von tiefen Unterordnern."
 				}
 			}
 		}

@@ -6,7 +6,8 @@ import { extensionName } from './const';
 
 export const openCurrentDirectoryFiles = (uri: vscode.Uri) => {
     if (typeof uri === 'undefined') {
-        vscode.window.showErrorMessage('Open a file to open its sibling files');
+        vscode.window.showErrorMessage('Öffnen Sie eine Datei in diesem Ordner.');
+        //vscode.window.showErrorMessage('Open a File in this Folder.');
         return;
     }
 
@@ -15,7 +16,8 @@ export const openCurrentDirectoryFiles = (uri: vscode.Uri) => {
 
 export const openCurrentDirectoryFilesRecursive = (uri: vscode.Uri) => {
     if (typeof uri === 'undefined') {
-        vscode.window.showErrorMessage('Open a file to open its sibling files');
+        vscode.window.showErrorMessage('Öffnen Sie eine Datei in diesem Ordner.');
+        //vscode.window.showErrorMessage('Open a File in this Folder.');
         return;
     }
 
@@ -30,13 +32,23 @@ function openAllFilesInDirectory(uri: vscode.Uri, recursive: boolean = false, de
 
     if (depth > config.maximumFolderDepth) {
         isError = true;
-        vscode.window.showErrorMessage(`Can't not open ${depth} Depth-Folders. Depth: ${config.maximumFolderDepth}`);
+        vscode.window.showErrorMessage(`${depth} Unterordner können nicht geöffnet werden. Maximale Tiefe/Unterordner ist: ${config.maximumFolderDepth}`);
+        //vscode.window.showErrorMessage(`Can't not open ${depth} Sub Folders. Maximum Depth/Subfolders is: ${config.maximumFolderDepth}`);
         return;
     }
 
     if (fileCount > config.maximumFiles) {
         isError = true;
-        vscode.window.showErrorMessage(`Can't not open ${fileCount} Files. FileCount: ${config.maximumFiles}`);
+        let fileCountName = "Datei";
+        //let fileCountName = "File";
+
+        if (fileCount > 1 || fileCount == 0) {
+            fileCountName = "Dateien";
+            //fileCountName = "Files";
+        }
+
+        vscode.window.showErrorMessage(`Kann ${fileCount} ${fileCountName} nicht öffnen. Die maximale Dateianzahl beträgt: ${config.maximumFiles}`);
+        //vscode.window.showErrorMessage(`Can't not open ${fileCount} Files. FileCount: ${config.maximumFiles}`);
         return;
     }
 
@@ -47,7 +59,8 @@ function openAllFilesInDirectory(uri: vscode.Uri, recursive: boolean = false, de
 
         fs.readdir(parentDir, (err, files: string[]) => {
             if (err) {
-                return vscode.window.showErrorMessage(`Can't read Directory. Error: ${err?.message}`);
+                return vscode.window.showErrorMessage(`Verzeichnis kann nicht gelesen werden. Fehler: ${err?.message}`);
+                //return vscode.window.showErrorMessage(`Can't read Directory. Error: ${err?.message}`);
             }
 
             files.forEach((file) => {
