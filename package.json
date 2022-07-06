@@ -2,7 +2,7 @@
 	"name": "vsc-open-all-files-in-directory",
 	"displayName": "Open all Files in Directory or Subfolders",
 	"description": "Open All Files in Directory or Subfolders",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "EuroCent",
 	"license": "MIT",
 	"repository": {
